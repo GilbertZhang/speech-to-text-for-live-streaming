@@ -1,0 +1,60 @@
+<!doctype html>
+<title>NBA Commentary Speech to Text</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>NBA Commentary Speech to Text</h1>
+  <div class=metanav>
+    <a href="/stream">Audio Streaming</a>
+  </div>
+
+  <center>
+    <form action="" method="post">
+      Choose a Clip on Cloud:
+      <select name="gcs_uri">
+        <option value="19s">short19s</option>
+        <option value="30s">short30s</option>
+        <option value="2min">long2min</option>
+        <option value="Best NBA commentators.wav">superlong11min</option>
+      </select><br><br>
+
+      Choose a 2nd Language:
+      <select name="language">
+        <option value="None">None</option>
+        <option value="zh">Chinese</option>
+        <option value="ja">Japanese</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+      </select><br><br>
+      <input type="submit" value="Convert Text!">
+
+    
+
+      </form>
+  </center>
+  <br>
+ <center>Result</center>
+  {% for entry in entries %}
+  <p><small>{{entry}}</small><br></p>
+  {% endfor %}
+  <hr>
+  {% for entry in translate %}
+  <p><small>{{entry}}</small><br></p>
+  {% endfor %}
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<footer>
+  <p><small>Hack the North 2018</small></p>
+  <p><small>Contact information: <a href="mailto:jz2997@columbia.edu">jz2997@columbia.edu</a>.</small></p>
+</footer>
+
+</div>

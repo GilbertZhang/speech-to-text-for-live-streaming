@@ -1,0 +1,8 @@
+DEBUG = True
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+SECRET_KEY='A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
+
+SQLALCHEMY_DATABASE_URI = "mysql://root:zhouxuexuan123@127.0.0.1:3306/Flasker_DB"
