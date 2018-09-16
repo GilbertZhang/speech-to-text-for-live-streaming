@@ -19,6 +19,12 @@ def compose_page():
 
     return render_template('compose.html', entries = trans_entries, translate = translate_trans)
 
+@app.route('/stream', methods=['GET, POST'])
+def stream():
+    text = ""
+    if request.method == "POST":
+        text = ""
+    return render_template('streaming.html', text = text)
 
 # [START speech_transcribe_async_gcs]
 def transcribe_gcs(gcs_uri):
